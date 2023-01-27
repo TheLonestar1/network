@@ -24,7 +24,8 @@ void * send_client(void * m) {
 		}
 		string data;
 		std::getline(cin,data);
-		tcp.Send(data,desc->id);
+		byte[] bytes = Encoding.ASCII.GetBytes(someString);
+		tcp.Send(bytes,desc->id);
 	}
 	pthread_exit(NULL);
 	return 0;
